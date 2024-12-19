@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ООО "ВЕСТА-Уют"</title>
+    <link rel="stylesheet" href="styleforpract.css">
+</head>
+<body>
+
+<header>
+    <nav>
+        <a href="index.html">Главная</a>
+        <a href="123.html">Услуги</a>
+        <a href="practdescript.html">Описание практики</a>
+        <a href="exercises.html">Задания</a>
+        <a href="gallery.html">Фотогалерея</a>
+        <a href="map.html">Карта</a>
+    </nav>
+</header>
+<div class="practice" id="practice">
+    <h2>Описание практической деятельности</h2>
+    <p>Во время практики в компании «ВЕСТА-Уют» я выполняла следующие задачи:</p>
+    <ul>
+        <li>Участие в управлении многоквартирными домами.</li>
+        <li>Сбор данных для отчетности и анализа состояния объектов.</li>
+        <li>Помощь в организации текущих ремонтов.</li>
+    </ul>
+<div class="container">
+    <div class="gallery" id="gallery">
+      <h2>По данной ссылке доступны все виды выполненных работ</h2>
+      <div class="button">
+        <a href="https://drive.google.com/drive/folders/13Osp33GBhDfyo35svLNgvjlgqT3kZ_4n?usp=sharing">Выполненные работы</a>
+      </div>
+      
+      
+      
+      
+        <p>Ниже представлены фотографии выполненных работ</p>
+      <div class="gallery-container" id="galleryContainer">
+          <!-- Здесь следует добавить 40 изображений, оставлены только примеры -->
+          <img src="https://raw.githubusercontent.com/sofa974/proiz-_praktika_twine/refs/heads/main/photo_1_2024-12-19_00-12-42.jpg" alt="Фото 1">
+          <img src="https://raw.githubusercontent.com/sofa974/proiz-_praktika_twine/refs/heads/main/photo_2_2024-12-19_00-12-42.jpg" alt="Фото 2">
+          <img src="https://raw.githubusercontent.com/sofa974/proiz-_praktika_twine/refs/heads/main/photo_3_2024-12-19_00-12-42.jpg" alt="Фото 3">
+          <img src="https://raw.githubusercontent.com/sofa974/proiz-_praktika_twine/refs/heads/main/photo_4_2024-12-19_00-12-42.jpg" alt="Фото 4">
+          <img src="https://raw.githubusercontent.com/sofa974/proiz-_praktika_twine/refs/heads/main/photo_5_2024-12-19_00-12-42.jpg" alt="Фото 5">
+          <img src="https://raw.githubusercontent.com/sofa974/proiz-_praktika_twine/refs/heads/main/photo_6_2024-12-19_00-12-42.jpg" alt="Фото 6">
+          <img src="https://raw.githubusercontent.com/sofa974/proiz-_praktika_twine/refs/heads/main/photo_7_2024-12-19_00-12-42.jpg" alt="Фото 7">         
+      </div>
+      <div>
+          <button class="scroll-button" id="scrollLeft">←</button>
+          <button class="scroll-button" id="scrollRight">→</button>
+      </div>
+  </div>
+</div>
+<script>
+    const galleryContainer = document.getElementById('galleryContainer');
+    
+    document.getElementById('scrollLeft').addEventListener('click', () => {
+        galleryContainer.scrollBy({
+            top: 0,
+            left: -300, 
+            behavior: 'smooth'
+        });
+    });
+
+    document.getElementById('scrollRight').addEventListener('click', () => {
+        galleryContainer.scrollBy({
+            top: 0,
+            left: 300, 
+            behavior: 'smooth'
+        });
+    });
+
+    // Получаем все изображения в галерее
+    const images = galleryContainer.getElementsByTagName('img');
+
+    // Добавляем обработчик события для каждого изображения
+    Array.from(images).forEach(image => {
+        image.addEventListener('click', () => {
+            // Создаем элемент для отображения большого изображения
+            const largeImage = document.createElement('img');
+            largeImage.src = image.src; // Предполагается, что большое изображение имеет такой же src
+            largeImage.style.position = 'fixed';
+            largeImage.style.top = '50%';
+            largeImage.style.left = '50%';
+            largeImage.style.transform = 'translate(-50%, -50%)';
+            largeImage.style.zIndex = '1000';
+            largeImage.style.maxWidth = '90%';
+            largeImage.style.maxHeight = '90%';
+            largeImage.style.boxShadow = '0 0 10px rgba(0, 0, 0, 0.5)';
+            largeImage.style.cursor = 'pointer';
+
+            // Закрытие большого изображения при клике
+            largeImage.addEventListener('click', () => {
+                document.body.removeChild(largeImage);
+            });
+
+            // Добавляем большое изображение в body
+            document.body.appendChild(largeImage);
+        });
+    });
+</script>
+
+<footer>
+    <p>© 2024 ООО "ВЕСТА". Все права защищены.</p>
+</footer>
+
+</body>

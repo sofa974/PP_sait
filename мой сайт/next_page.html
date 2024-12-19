@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ООО "ВЕСТА"</title>
+    <link rel="stylesheet" href="style1.css">
+    <style>
+        body {
+            margin: 0; /* Убираем отступы у body */
+        }
+
+        /* Стили для навигационного меню */
+        nav {
+            background: #003366; /* Цвет фона меню */
+            padding: 10px; /* Отступы внутри меню */
+            display: flex; /* Используем flexbox для выравнивания кнопок */
+            justify-content: center; /* Центрируем кнопки по горизонтали */
+        }
+        
+        nav a {
+            color: white; /* Цвет текста кнопок */
+            padding: 10px 15px; /* Отступы для кнопок */
+            text-decoration: none; /* Убираем подчеркивание */
+            margin: 0 5px; /* Отступы между кнопками */
+            border-radius: 5px; /* Закругление углов кнопок */
+            transition: background 0.3s; /* Плавный переход цвета */
+        }
+        
+        nav a:hover {
+            background: #004080; /* Цвет фона при наведении */
+        }
+
+        header {
+            padding: 0; /* Убираем отступы у header */
+            margin: 0; /* Убираем отступы у header */
+        }
+
+        .logo {
+            display: block; /* Делаем логотип блочным элементом */
+            margin: 0 auto; /* Центрируем логотип */
+        }
+
+        /* Стили для карты */
+        .map-container {
+            width: 100%;
+            height: 400px; /* Высота карты */
+            margin: 20px 0; /* Отступы сверху и снизу */
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <nav>
+        <a href="#description">Описание компании</a>
+        <a href="#services">Услуги</a>
+        <a href="#practice">Описание практики</a>
+        <a href="#assignments">Задания</a>
+        <a href="#gallery">Фотогалерея</a>
+        <a href="#map">Карта</a> <!-- Добавляем ссылку на карту -->
+    </nav>
+    
+    <img src="https://gkvesta.ru/_images/logo_vesta.png" alt="Логотип" class="logo"> 
+    <h1>ООО "ВЕСТА"</h1>
+    <div class="address">
+        <h3>Адрес местонахождения:</h3>
+        140105, Московская область, г. Раменское, ул. Чугунова, д. 15 а.
+        <br>Вход с левого торца здания (стеклянные двери), домофон 37 или 39, 2-й этаж на лифте.  
+        <br>Телефон: +7 (496) 465-80-08 
+        <br>Электронная почта: info@ykvesta.ru
+    </div>
+</header>
+
+<div class="container">
+    <div class="description" id="description">
+        <h2>Описание компании</h2>
+        <p>ГРУППА УПРАВЛЯЮЩИХ КОМПАНИЙ «ВЕСТА» работает на рынке предоставления услуг по управлению многоквартирными жилыми домами с 2011 года. 
+        Задача профессиональной управляющей организации – предложить собственникам помещений такой перечень работ и услуг, 
+        который обеспечит надлежащее состояние общего имущества в многоквартирном доме. 
+        Если многоквартирный дом или его отдельные части нуждаются в ремонте или замене, именно управляющая организация может и должна грамотно оценить, 
+        что необходимо сделать в первую очередь, а что можно отложить, если у собственников помещений в настоящее время не хватит средств для финансирования всех видов ремонта.</p>
+    </div>
+
+    <div class="services" id="services">
+        <div class="text-overlay">Предоставляемые услуги</div>
+        <div class="service" onclick="location.href='next_page.html'">
+            <img src="https://gkvesta.ru/upload/iblock/26e/3_montag-r.jpg" alt="Услуга 1">
+            <h3>Сантехнические работы</h3>
+            <p>Установка сантехнических приборов, унитазов, раковин, ванн и душевых кабин, смесителей. Прочистка засоров*, подключение стиральных и посудомоечных машин, ремонт сливного механизма бачка унитаза. Установка и замена квартирных водосчетчиков
+                <br>Задать вопрос инженеру: 8 (919) 961-18-11
+                <br>Гарантийный срок на предоставление услуг составляет 6 (шесть) месяцев. 
+                <br>*- На устранение засоров гарантия не распространяется!
+            </p>
+        </div>
+        <div class="service" onclick="location.href='next_page.html'">
+            <img src="https://gkvesta.ru/upload/iblock/751/5_prochie_raboti.png" alt="Услуга 2">
+            <h3>Проектные работы</h3>
+            <p>Разработка проектов по перепланировке и переустройству жилых и нежилых помещений.
+                Услуги по согласованию и технологическому сопровождению работ по переустройству и перепланировке жилых и нежилых помещений.
+                Выкопировка из технического паспорта и т.д.
+                <br>Заказать проект по тел.: 8(926)231-21-55</p>
+        </div>
+        <div class="service" onclick="location.href='next_page.html'">
+            <img src="https://gkvesta.ru/upload/iblock/f91/2_ipu.jpg" alt="Услуга 3">
+            <h3>Установка и замена индивидуальных приборов учета (ИПУ)</h3>
+            <p> Оставить заявку на установку/замену ИПУ :8/496/465-80-78  
+                <br>Диспетчер 
+                8/919/961-18-11 инженер  WhatsApp
+                <br>Поверка ИПУ ХВС/ГВС (без снятия): метрологическая служба "Водомер" 8(495)236-00-00</p>
+        </div>
+    </div>
+
+    <!-- Раздел о практике -->
+    <div class="practice" id="practice">
+        <h2>Описание практики</h2>
+        <p>Во время практики в компании «ВЕСТА» я выполняла следующие задачи:</p>
+        <ul>
+            <li>Участие в управлении многоквартирными домами.</li>
+            <li>Сбор данных для отчетности и анализа состояния объектов.</li>
+            <li>Помощь в организации текущих ремонтов.</li>
+            <li>Обработка обращений клиентов и собственников.</li>
+        </ul>
+    </div>
+
+    <!-- Раздел заданий от образовательного учреждения -->
+    <div class="assignments" id="assignments">
+        <h2>Задания от образовательного учреждения</h2>
+        <p>Во время прохождения практики от образовательного учреждения были поставлены следующие задания:</p>
+        <ul>
+            <li>Изучение основ управления многоквартирными домами.</li>
+            <li>Подготовка аналитического отчета по состоянию объектов.</li>
+            <li>Составление планов текущих ремонтных работ.</li>
+            <li>Анализ эффективности управления ресурсами.</li>
+        </ul>
+    </div>
+    
+    <!-- Раздел фотогалереи -->
+    <div class="gallery" id="gallery">
+        <h2>Фотогалерея</h2>
+        <div class="gallery-container" id="galleryContainer">
+            <!-- Здесь следует добавить 40 изображений, оставлены только примеры -->
+            <img src="https://raw.githubusercontent.com/sofa974/proiz-_praktika_twine/refs/heads/main/photo_1_2024-12-14_22-40-08.jpg" alt="Фото 1">
+            <img src="https://raw.githubusercontent.com/sofa974/proiz-_praktika_twine/refs/heads/main/photo_1_2024-12-14_22-40-08.jpg" alt="Фото 2">
+            <img src="https://raw.githubusercontent.com/sofa974/proiz-_praktika_twine/refs/heads/main/photo_1_2024-12-14_22-40-08.jpg" alt="Фото 3">
+            <img src="https://raw.githubusercontent.com/sofa974/proiz-_praktika_twine/refs/heads/main/photo_1_2024-12-14_22-40-08.jpg" alt="Фото 4">
+            <img src="https://raw.githubusercontent.com/sofa974/proiz-_praktika_twine/refs/heads/main/photo_1_2024-12-14_22-40-08.jpg" alt="Фото 5">
+            <img src="https://raw.githubusercontent.com/sofa974/proiz-_praktika_twine/refs/heads/main/photo_1_2024-12-14_22-40-08.jpg" alt="Фото 6">
+            <img src="https://raw.githubusercontent.com/sofa974/proiz-_praktika_twine/refs/heads/main/photo_1_2024-12-14_22-40-08.jpg" alt="Фото 7">
+            <img src="https://raw.githubusercontent.com/sofa974/proiz-_praktika_twine/refs/heads/main/photo_1_2024-12-14_22-40-08.jpg" alt="Фото 8">
+            <img src="https://raw.githubusercontent.com/sofa974/proiz-_praktika_twine/refs/heads/main/photo_1_2024-12-14_22-40-08.jpg" alt="Фото 9">
+            <img src="https://raw.githubusercontent.com/sofa974/proiz-_praktika_twine/refs/heads/main/photo_1_2024-12-14_22-40-08.jpg" alt="Фото 10">
+        </div>
+        <div>
+            <button class="scroll-button" id="scrollLeft">←</button>
+            <button class="scroll-button" id="scrollRight">→</button>
+        </div>
+    </div>
+
+    <!-- Раздел с Яндекс картой -->
+    <div class="container" id="container">
+    <div class="map-container" id="map">
+        <h2>Карта</h2>
+        <iframe src="https://yandex.ru/map-widget/v1/-/CHELmL42" width="100%" height="400" frameborder="0" allowfullscreen="true"></iframe>
+    </div>
+</div>
+
+<footer>
+    <p>© 2024 ООО "ВЕСТА". Все права защищены.</p>
+</footer>
+
+<script>
+    const galleryContainer = document.getElementById('galleryContainer');
+    
+    document.getElementById('scrollLeft').addEventListener('click', () => {
+        galleryContainer.scrollBy({
+            top: 0,
+            left: -300, 
+            behavior: 'smooth'
+        });
+    });
+
+    document.getElementById('scrollRight').addEventListener('click', () => {
+        galleryContainer.scrollBy({
+            top: 0,
+            left: 300, 
+            behavior: 'smooth'
+        });
+    });
+
+    // Получаем все изображения в галерее
+    const images = galleryContainer.getElementsByTagName('img');
+
+    // Добавляем обработчик события для каждого изображения
+    Array.from(images).forEach(image => {
+        image.addEventListener('click', () => {
+            // Создаем элемент для отображения большого изображения
+            const largeImage = document.createElement('img');
+            largeImage.src = image.src; // Предполагается, что большое изображение имеет такой же src
+            largeImage.style.position = 'fixed';
+            largeImage.style.top = '50%';
+            largeImage.style.left = '50%';
+            largeImage.style.transform = 'translate(-50%, -50%)';
+            largeImage.style.zIndex = '1000';
+            largeImage.style.maxWidth = '90%';
+            largeImage.style.maxHeight = '90%';
+            largeImage.style.boxShadow = '0 0 10px rgba(0, 0, 0, 0.5)';
+            largeImage.style.cursor = 'pointer';
+
+            // Закрытие большого изображения при клике
+            largeImage.addEventListener('click', () => {
+                document.body.removeChild(largeImage);
+            });
+
+            // Добавляем большое изображение в body
+            document.body.appendChild(largeImage);
+        });
+    });
+</script>
+</body>
+</html>

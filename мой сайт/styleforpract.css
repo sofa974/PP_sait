@@ -1,0 +1,156 @@
+body {
+    margin: 0;
+    font-family: 'Roboto', sans-serif;
+    background-color: #eef2f3;
+    color: #000000;
+}
+nav {
+    
+    background: #29c55d; /* Цвет фона меню */
+    padding: 10px; /* Отступы внутри меню */
+    display: flex; /* Используем flexbox для выравнивания кнопок */
+    justify-content: center; /* Центрируем кнопки по горизонтали */
+}
+
+nav a {
+    color: white; /* Цвет текста кнопок */
+    padding: 10px 15px; /* Отступы для кнопок */
+    text-decoration: none; /* Убираем подчеркивание */
+    margin: 0 15px; /* Отступы между кнопками */
+    border-radius: 5px; /* Закругление углов кнопок */
+    transition: background 0.3s; /* Плавный переход цвета */
+}
+
+nav a:hover {
+    background: #19a337; /* Цвет фона при наведении */
+}
+
+p {
+    font-size: 20px;  /* размер шрифта */
+    line-height: 24px;  /* высота строки (1,5 * 16px) */
+    margin-top: 100px;
+}
+h2 {
+  color: #29c55d;
+  margin-bottom: 20px;
+}
+.practice {
+    height: 250px;
+    width: 1200px;
+    margin: auto;
+    margin-top: 50px;
+    text-align: center;
+    background: white;
+    border-radius: 30px;
+    padding: 20px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+.container {
+    max-width: 1200px;
+    height: auto;
+    margin: 10px 0px;
+    padding: 20px;
+    overflow: hidden;
+}
+.gallery-container {
+    display: flex;
+    overflow-x: auto; /* Горизонтальная прокрутка */
+    padding: 10px 0;
+    scroll-behavior: smooth; /* Плавная прокрутка */
+}
+.gallery img {
+    width: 350px; /* Ширина изображений в галерее */
+    height: auto;
+    margin-top: 50px;
+    margin-right: 10px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    transition: transform 0.3s;
+}
+.gallery img:hover {
+    transform: scale(1.05);
+}
+/* Стили для кнопок прокрутки */
+.scroll-button {
+    background-color: #29c55d;
+    color: white;
+    border: none;
+    align-items: center;
+    border-radius: 5px;
+    cursor: pointer;
+    padding: 10px 15px;
+    margin: 10px;
+    font-size: 16px;
+    transition: background-color 0.3s;
+}
+.scroll-button:hover {
+    background-color: #1b8c3e;
+}
+.gallery {
+    height: 450px;
+    width: 1100px;
+    margin-top: 150px;
+    text-align:center;
+    background: white;
+    border-radius: 30px;
+    padding: 20px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+footer {
+    background: #29c55d; /* Цвет фона меню */
+    color: white;
+    text-align: center;    
+    position: fixed; /* Закрепляет footer внизу */
+    left: 0; /* Прикрепляет к левому краю */
+    bottom: 0; /* Прикрепляет к нижнему краю */
+    width: 100%; /* Занимает всю ширину */
+    padding: 10px 0; /* Отступы для footer */
+    z-index: 0; /* Убедитесь, что footer будет поверх других элементов */
+}
+
+  .button {
+    background-color: #29c55d;
+    color: white;
+    border: none;
+    align-items: center;
+    margin-left: 440px;
+    width: 200px;
+    border-radius: 15px;
+    cursor: pointer;
+    padding: 10px 15px;
+    font-size: 10px;
+    transition: background-color 0.3s;
+}
+.button:hover {
+    background-color: #1b8c3e;
+}
+h1, h2, h3 {
+    animation: fadeIn 0.5s; /* Появление заголовков */
+}
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes slideIn {
+    from {
+        transform: translateY(100%);
+    }
+    to {
+        transform: translateY(0);
+    }
+}
+body, h1, h2, h3, p, div {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+
